@@ -1,0 +1,13 @@
+**/node_modules/
+**/.env
+*.log
+mongo_data/
+**/mongo_data/
+frontend/dist/
+backend/uploads/*
+!backend/uploads/product-1.jpg
+!backend/uploads/product-2.jpg
+!backend/uploads/product-3.jpg
+!backend/uploads/product-4.jpg
+!backend/uploads/product-5.jpg
+!backend/uploads/product-6.jpg
