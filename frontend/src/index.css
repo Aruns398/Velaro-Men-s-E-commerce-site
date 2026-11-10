@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 11% 97.6%;
+    --foreground: 222 47% 7.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 7.2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 7.2%;
+
+    --primary: 218 26% 14%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 30% 24%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 93%;
+    --muted-foreground: 215 14% 40%;
+
+    --accent: 34 35% 64%;
+    --accent-foreground: 218 26% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 34 35% 64%;
+
+    --radius: 0.125rem;
+
+    --sidebar-background: 218 26% 14%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 34 35% 64%;
+    --sidebar-primary-foreground: 218 26% 14%;
+    --sidebar-accent: 210 30% 24%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 30% 24%;
+    --sidebar-ring: 34 35% 64%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+    --gold-gradient: linear-gradient(135deg, hsl(34 35% 64%), hsl(38 40% 72%));
+    --dark-gradient: linear-gradient(135deg, hsl(218 26% 14%), hsl(210 30% 24%));
+    --shadow-product: 0 2px 12px -4px hsl(218 26% 14% / 0.12);
+    --shadow-elevated: 0 8px 30px -8px hsl(218 26% 14% / 0.18);
+  }
+
+  .dark {
+    --background: 218 26% 8%;
+    --foreground: 210 40% 98%;
+    --card: 218 26% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 218 26% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 34 35% 64%;
+    --primary-foreground: 218 26% 14%;
+    --secondary: 210 30% 24%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 218 26% 16%;
+    --muted-foreground: 215 14% 60%;
+    --accent: 34 35% 64%;
+    --accent-foreground: 218 26% 14%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 218 26% 20%;
+    --input: 218 26% 20%;
+    --ring: 34 35% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+
+    /* Hide scrollbars while keeping scrolling enabled */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  /* WebKit browsers */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  /* Hide native browser password reveal eye icon (Edge / Chromium on Windows) */
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gold-gradient {
+    background: var(--gold-gradient);
+  }
+  .dark-gradient {
+    background: var(--dark-gradient);
+  }
+  .shadow-product {
+    box-shadow: var(--shadow-product);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Hide scrollbars while still allowing scrolling */
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
